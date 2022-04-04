@@ -24,8 +24,8 @@
   na
 
   ### Licenses:
-  Mozilla,IBM
-  
+  MIT,Mozilla,IBM,Apache,Boost,Perl,Open Data Commons
+  ![badge](https://img.shields.io/badge/license-MIT,Mozilla,IBM,Apache,Boost,Perl,Open Data Commons-brightgreen)
 
 
   ### GitHub:
