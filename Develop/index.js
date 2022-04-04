@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
-const fs = require('fs');
-const generatePage = require('./utils/generateMarkdown');
+const { writeFile, copyFile } = require('./utils/generateMarkdown.js');
+const generatePage = require('./utils/markdown-template');
 
-// TODO: Create an object containing questions for user input
+// Object containing questions for user input
 const promptUser = () => {
     return inquirer.prompt([
         {
@@ -35,15 +35,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'instructions',
-            message: 'Please list the installation instructions.',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter the name of your project!');
-                    return false;
-                }
-            }
+            message: 'Please list the installation instructions.'
         },
         {
             type: 'input',
@@ -61,7 +53,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'test',
-            message: 'What are the test intrucitons?',
+            message: 'What are the test intructions?',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -75,7 +67,7 @@ const promptUser = () => {
             type: 'checkbox',
             name: 'licenses',
             message: 'What licenses need to be added to the README? (Check all that apply)',
-            choices: ['MIT', 'Mozilla', 'IBM', 'Apache', 'Boost', 'Perl', 'Open']
+            choices: ['MIT', 'Mozilla', 'IBM', 'Apache', 'Boost', 'Perl', 'Open Data Commons']
           },
           {
             type: 'input',
@@ -102,9 +94,8 @@ const promptUser = () => {
                 return false;
               }
             }
-          },
+          }
     ])
-
 };
 
 // TODO: Create a function to write README file
@@ -124,4 +115,14 @@ const promptUser = () => {
 // Function call to initialize app
 promptUser()
     .then(answers => console.log(answers))
-    .then(writeToFile);
+    .then(readmeText => {
+        return generatePage(readmeText);
+    })
+    .then(writeFileResponse => {
+        console.log(writeFileResponse);
+        return copyFile();
+    })
+    .catch(err => {
+        console.log(err);
+    });
+

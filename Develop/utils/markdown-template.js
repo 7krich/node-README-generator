@@ -8,32 +8,38 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
-    if (license) {
-        return `${licenseLink}`
-    } else {
-        return "";
-    }
-}
+// function renderLicenseLink(license) {
+//     if (license) {
+//         return `${licenseLink}`
+//     } else {
+//         return "";
+//     }
+// }
 
 // Function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
     if (license) {
-        return "## License:";
+        return "## License: " + renderLicenseBadge();
     } else {
         return "";
     }
 };
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+module.exports = templateData =>  {
+    const {} = templateData;
+
+
   return `# ${data.title}
+
+
+  ${renderLicenseSection(license)}
 
 `;
 }
 
 
-module.exports = templateData => {
+// module.exports = templateData => {
 
-}
+// }
