@@ -44,38 +44,22 @@ const promptUser = () => {
             type: 'input',
             name: 'guidelines',
             message: 'List the contribution guidelines.',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter the name of your project!');
-                    return false;
-                }
-            }
         },
         {
             type: 'input',
             name: 'test',
             message: 'What are the test intructions?',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter the test instructions!');
-                    return false;
-                }
-            }
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'licenses',
-            message: 'What licenses need to be added to the README? (Check all that apply)',
+            message: 'What license needs to be added to the README?',
             choices: ['MIT', 'Mozilla', 'IBM', 'Apache', 'Boost', 'Perl', 'Open Data Commons']
           },
           {
             type: 'input',
             name: 'github',
-            message: 'Enter your GitHub Username',
+            message: 'Enter your GitHub Username: (required)',
             validate: nameInput => {
               if (nameInput) {
                 return true;
@@ -89,14 +73,6 @@ const promptUser = () => {
             type: 'input',
             name: 'email',
             message: 'Please enter your e-mail:',
-            validate: nameInput => {
-              if (nameInput) {
-                return true;
-              } else {
-                console.log('Please enter your e-mail!');
-                return false;
-              }
-            }
           }
     ])
 };
