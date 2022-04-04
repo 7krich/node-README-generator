@@ -1,10 +1,13 @@
 // Packages needed for this application
+const fs = require("fs");
+const util = require("util");
 const inquirer = require('inquirer');
-const { writeFile, copyFile } = require('./utils/generateMarkdown.js');
-const generatePage = require('./utils/markdown-template');
+const generateReadme = require("./utils/markdown-template.js")
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // Object containing questions for user input
 const promptUser = () => {
+
     return inquirer.prompt([
         {
             type: 'input',
@@ -97,32 +100,20 @@ const promptUser = () => {
           }
     ])
 };
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//     fs.writeFile(fileName, data, err => {
-//         if (err) {
-//           return console.log(err);
-//         }
-      
-//         console.log("Success! Your README.md file has been generated")
-//     });
-// }
-
+g
 // TODO: Create a function to initialize app
-//function init() {}
-
-// Function call to initialize app
-promptUser()
-    .then(answers => console.log(answers))
-    .then(readmeText => {
-        return generatePage(readmeText);
-    })
-    .then(writeFileResponse => {
-        console.log(writeFileResponse);
-        return copyFile();
-    })
-    .catch(err => {
+async function init() {
+    try {
+        // Ask user questions and generate responses
+        const answers = await promptUser();
+        const generateContent = generateReadme(answers);
+        // Create README.md file
+        await writeFileAsync('./dist/README.md', generateContent);
+        console.log('New README.md generated!');
+    }   catch(err) {
         console.log(err);
-    });
+    }
+  }
 
+// Function call to initialize app  
+init ()
