@@ -75,7 +75,7 @@ const promptUser = () => {
             type: 'checkbox',
             name: 'licenses',
             message: 'What licenses need to be added to the README? (Check all that apply)',
-            choices: ['MIT', 'MSU', 'MDN', 'W3', 'Apple', 'Google', 'Microsoft']
+            choices: ['MIT', 'Mozilla', 'IBM', 'Apache', 'Boost', 'Perl', 'Open']
           },
           {
             type: 'input',
