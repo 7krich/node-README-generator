@@ -18,18 +18,19 @@
   na
 
   ### Guidelines:
-  
+  na
 
   ### Test Instructions:
-  
+  na
 
   ### Licenses:
-  Mozilla
-  ![badge](https://img.shields.io/badge/license-Mozilla-brightgreen)
+  Mozilla,IBM
+  
+
 
   ### GitHub:
-  https://github.com/7krich
+  https://github.com/na
 
   ### E-mail:
-  7krich@gmail.com
+  Please feel free to e-mail me at: na if you have any questions!
 

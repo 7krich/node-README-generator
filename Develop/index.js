@@ -38,20 +38,44 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'instructions',
-            message: 'Please list the installation instructions.'
+            message: 'Please list the installation instructions.',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter instructions!');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'guidelines',
             message: 'List the contribution guidelines.',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter contribution guidelines');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'test',
             message: 'What are the test intructions?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter test instructions!');
+                    return false;
+                }
+            }
         },
         {
-            type: 'list',
+            type: 'checkbox',
             name: 'licenses',
             message: 'What license needs to be added to the README?',
             choices: ['MIT', 'Mozilla', 'IBM', 'Apache', 'Boost', 'Perl', 'Open Data Commons']
@@ -73,6 +97,14 @@ const promptUser = () => {
             type: 'input',
             name: 'email',
             message: 'Please enter your e-mail:',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your e-mail!');
+                    return false;
+                }
+            }
           }
     ])
 };
