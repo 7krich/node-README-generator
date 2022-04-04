@@ -100,7 +100,7 @@ const promptUser = () => {
           }
     ])
 };
-g
+
 // TODO: Create a function to initialize app
 async function init() {
     try {
