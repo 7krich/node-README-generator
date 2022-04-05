@@ -15,22 +15,21 @@
   - [E-Mail] (#email)
 
   ### Instructions:
-  an
+  na
 
   ### Guidelines:
-  an
+  dksfjsdlf
 
   ### Test Instructions:
-  an
+  sdfhslkdfs
 
   ### Licenses:
-  Mozilla
-  ![badge](https://img.shields.io/badge/license-Mozilla-brightgreen)
+  ![badge](https://img.shields.io/badge/license-Mozilla-brightgreen)![badge](https://img.shields.io/badge/license-IBM-brightgreen)![badge](https://img.shields.io/badge/license-Apache-brightgreen)![badge](https://img.shields.io/badge/license-Boost-brightgreen)
 
 
   ### GitHub:
-  https://github.com/na
+  https://github.com/7krich
 
   ### E-mail:
-  Please feel free to e-mail me at: na if you have any questions!
+  Please feel free to e-mail me at: hahs if you have any questions!
 

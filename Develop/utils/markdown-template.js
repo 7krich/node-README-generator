@@ -1,13 +1,18 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-// function renderLicenseBadge (answers) {
+function renderLicenseBadge (licenses) {
 
-//     if (answers.licenses) {
-//         return `![badge](https://img.shields.io/badge/license-${answers.licenses}-brightgreen)`
-//     } else {
-//         return ""
-//     }
-// };
+    let ans = ""
+
+    if (licenses.licenses) {
+
+    for (var i = 0; i < licenses.licenses.length; i++) {
+      
+            ans += `![badge](https://img.shields.io/badge/license-${licenses.licenses[i]}-brightgreen)`
+
+        }
+    } return ans
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -31,6 +36,7 @@ function renderLicenseSection(answers) {
 
 // TODO: Create a function to generate markdown for README
 function generateReadme (answers) {
+    console.log(answers);
 
   return `
   
@@ -58,8 +64,7 @@ function generateReadme (answers) {
   ${answers.test}
 
   ### Licenses:
-  ${answers.licenses}
-  ![badge](https://img.shields.io/badge/license-${answers.licenses}-brightgreen)
+  ${renderLicenseBadge(answers)}
 
 
   ### GitHub:
