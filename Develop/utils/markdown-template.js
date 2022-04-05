@@ -4,7 +4,9 @@ function renderLicenseBadge (licenses) {
 
     let ans = ""
 
-    if (licenses.licenses) {
+    if (licenses.licenses.length !== 0) {
+
+        ans += `### Licenses: \n`
 
     for (var i = 0; i < licenses.licenses.length; i++) {
       
@@ -24,15 +26,6 @@ function renderLicenseBadge (licenses) {
 //     }
 // }
 
-// Function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(answers) {
-    if (answers) {
-        return renderLicenseBadge();
-    } else {
-        return "";
-    }
-};
 
 // TODO: Create a function to generate markdown for README
 function generateReadme (answers) {
@@ -63,7 +56,6 @@ function generateReadme (answers) {
   ### Test Instructions:
   ${answers.test}
 
-  ### Licenses:
   ${renderLicenseBadge(answers)}
 
 
