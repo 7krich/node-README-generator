@@ -1,8 +1,9 @@
 
-# the best 
+# NODE README Generator Machine ## Licenses: 
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)![badge](https://img.shields.io/badge/license-IBM-brightgreen)![badge](https://img.shields.io/badge/license-Boost-brightgreen)![badge](https://img.shields.io/badge/license-Perl-brightgreen)
 
 ## Description:
-its really great
+Create incredible README's using the power of node.js!
 
 ## Table of Contents: 
   - [Description] (#description)
@@ -14,13 +15,17 @@ its really great
   - [E-Mail] (#email)
 
 ## Instructions:
-download it to your computer
+Clone this repository to your local machine, open up your command line and type "node index" or "node index.js." This will display a series of question prompts that allow you enter all the information that will be contained in the new README. The app will do the rest for you & generate an easily digestible README.md file.
 
 ## Guidelines:
-add to it
+Answer the prompts accordingly!
 
 ## Test Instructions:
-try it out
+Make sure the file is properly added to your local machine. You also need to make sure you have downloaded node.js.
+
+## Licenses:
+The licenses used for this file include: 
+MIT, IBM, Boost, Perl
 
 ## GitHub:
 https://github.com/7krich

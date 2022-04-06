@@ -28,7 +28,6 @@ function renderLicenseInfo(licInfo) {
 
         let resp = []
 
-        console.log(licInfo.licenses)
             resp = licInfo.licenses.join(", ")
             ans += `${resp}\n`
 
@@ -38,13 +37,12 @@ function renderLicenseInfo(licInfo) {
 
 // TODO: Create a function to generate markdown for README
 function generateReadme (answers) {
-    console.log(answers);
 
   return `
 # ${answers.title} ${renderLicenseBadge(answers)}
 
 ## Description:
-${answers.description}
+👋 ${answers.description}
 
 ## Table of Contents: 
   - [Description] (#description)
@@ -56,19 +54,19 @@ ${answers.description}
   - [E-Mail] (#email)
 
 ## Instructions:
-${answers.instructions}
+💻 ${answers.instructions}
 
 ## Guidelines:
-${answers.guidelines}
+👪 ${answers.guidelines}
 
 ## Test Instructions:
-${answers.test}
+💾 ${answers.test}
 ${renderLicenseInfo(answers)}
 ## GitHub:
 https://github.com/${answers.github}
 
 ## E-mail:
-Please feel free to e-mail me at: ${answers.email} if you have any questions!
+✋ Please feel free to e-mail me at: ${answers.email} if you have any questions!
 
 `;
 }
