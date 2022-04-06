@@ -6,7 +6,7 @@ function renderLicenseBadge (licenses) {
 
     if (licenses.licenses.length !== 0) {
 
-        ans += `### Licenses: \n`
+        ans += `## Licenses: \n`
 
     for (var i = 0; i < licenses.licenses.length; i++) {
       
@@ -18,13 +18,22 @@ function renderLicenseBadge (licenses) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-// function renderLicenseLink(answers) {
-//     if (answers.license) {
-//         return ``
-//     } else {
-//         return "";
-//     }
-// }
+function renderLicenseInfo(licInfo) {
+
+    let ans = ""
+
+    if (licInfo.licenses.length !== 0) {
+
+        ans += `\n## Licenses:\nThe licenses used for this file include: \n`
+
+        let resp = []
+
+        console.log(licInfo.licenses)
+            resp = licInfo.licenses.join(", ")
+            ans += `${resp}\n`
+
+    } return ans
+}
 
 
 // TODO: Create a function to generate markdown for README
@@ -32,13 +41,12 @@ function generateReadme (answers) {
     console.log(answers);
 
   return `
-  
-  # ${answers.title}
+# ${answers.title} ${renderLicenseBadge(answers)}
 
-  ## Description:
-  ${answers.description}
+## Description:
+${answers.description}
 
-  ## Table of Contents: 
+## Table of Contents: 
   - [Description] (#description)
   - [Instructions] (#instructions)
   - [Guidelines] (#guidelines)
@@ -47,23 +55,20 @@ function generateReadme (answers) {
   - [GitHub] (#github)
   - [E-Mail] (#email)
 
-  ### Instructions:
-  ${answers.instructions}
+## Instructions:
+${answers.instructions}
 
-  ### Guidelines:
-  ${answers.guidelines}
+## Guidelines:
+${answers.guidelines}
 
-  ### Test Instructions:
-  ${answers.test}
+## Test Instructions:
+${answers.test}
+${renderLicenseInfo(answers)}
+## GitHub:
+https://github.com/${answers.github}
 
-  ${renderLicenseBadge(answers)}
-
-
-  ### GitHub:
-  https://github.com/${answers.github}
-
-  ### E-mail:
-  Please feel free to e-mail me at: ${answers.email} if you have any questions!
+## E-mail:
+Please feel free to e-mail me at: ${answers.email} if you have any questions!
 
 `;
 }
