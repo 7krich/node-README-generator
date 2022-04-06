@@ -1,9 +1,9 @@
 
-# NODE README Generator Machine ## Licenses: 
+# Node Readme Generator!! ## Licenses: 
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)![badge](https://img.shields.io/badge/license-IBM-brightgreen)![badge](https://img.shields.io/badge/license-Boost-brightgreen)![badge](https://img.shields.io/badge/license-Perl-brightgreen)
 
 ## Description:
-Create incredible README's using the power of node.js!
+This project allows users to build readme files for their project.
 
 ## Table of Contents: 
   - [Description] (#description)
@@ -11,25 +11,22 @@ Create incredible README's using the power of node.js!
   - [Guidelines] (#guidelines)
   - [Tests] (#test)
   - [Licenses] (#licenses)
-  - [GitHub] (#github)
-  - [E-Mail] (#email)
+  - [Questions] (#questions)
 
 ## Instructions:
-Clone this repository to your local machine, open up your command line and type "node index" or "node index.js." This will display a series of question prompts that allow you enter all the information that will be contained in the new README. The app will do the rest for you & generate an easily digestible README.md file.
+Clone this repo, download node.js & then type node index or node index.js in the command line!
 
 ## Guidelines:
-Answer the prompts accordingly!
+N/A
 
 ## Test Instructions:
-Make sure the file is properly added to your local machine. You also need to make sure you have downloaded node.js.
+No test instructions are needed for this file.
 
 ## Licenses:
 The licenses used for this file include: 
 MIT, IBM, Boost, Perl
 
-## GitHub:
-https://github.com/7krich
+## Questions:
+GitHub URL: https://github.com/7krich
 
-## E-mail:
-Please feel free to e-mail me at: 7krich@gmail.com if you have any questions!
-
+E-mail: 7krich@gmail.com
