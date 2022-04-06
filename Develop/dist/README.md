@@ -1,9 +1,9 @@
 
-# Node Readme Generator!! ## Licenses: 
-![badge](https://img.shields.io/badge/license-MIT-brightgreen)![badge](https://img.shields.io/badge/license-IBM-brightgreen)![badge](https://img.shields.io/badge/license-Boost-brightgreen)![badge](https://img.shields.io/badge/license-Perl-brightgreen)
+# Node Readme Generator! 
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)![badge](https://img.shields.io/badge/license-IBM-brightgreen)![badge](https://img.shields.io/badge/license-Apache-brightgreen)![badge](https://img.shields.io/badge/license-Perl-brightgreen)
 
 ## Description:
-This project allows users to build readme files for their project.
+a project that allows users to easily generate readme files.
 
 ## Table of Contents: 
   - [Description] (#description)
@@ -14,17 +14,17 @@ This project allows users to build readme files for their project.
   - [Questions] (#questions)
 
 ## Instructions:
-Clone this repo, download node.js & then type node index or node index.js in the command line!
+clone the repo, download node.js and run node index or node index.js in the command line
 
 ## Guidelines:
 N/A
 
 ## Test Instructions:
-No test instructions are needed for this file.
+N/A
 
 ## Licenses:
 The licenses used for this file include: 
-MIT, IBM, Boost, Perl
+MIT, IBM, Apache, Perl
 
 ## Questions:
 GitHub URL: https://github.com/7krich

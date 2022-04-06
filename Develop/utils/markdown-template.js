@@ -6,7 +6,7 @@ function renderLicenseBadge (licenses) {
 
     if (licenses.licenses.length !== 0) {
 
-        ans += `## Licenses: \n`
+        ans += `\n`
 
     for (var i = 0; i < licenses.licenses.length; i++) {
       
