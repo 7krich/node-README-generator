@@ -42,7 +42,7 @@ function generateReadme (answers) {
 # ${answers.title} ${renderLicenseBadge(answers)}
 
 ## Description:
-👋 ${answers.description}
+${answers.description}
 
 ## Table of Contents: 
   - [Description] (#description)
@@ -50,24 +50,21 @@ function generateReadme (answers) {
   - [Guidelines] (#guidelines)
   - [Tests] (#test)
   - [Licenses] (#licenses)
-  - [GitHub] (#github)
-  - [E-Mail] (#email)
+  - [Questions] (#questions)
 
 ## Instructions:
-💻 ${answers.instructions}
+${answers.instructions}
 
 ## Guidelines:
-👪 ${answers.guidelines}
+${answers.guidelines}
 
 ## Test Instructions:
-💾 ${answers.test}
+${answers.test}
 ${renderLicenseInfo(answers)}
-## GitHub:
-https://github.com/${answers.github}
+## Questions:
+GitHub URL: https://github.com/${answers.github}
 
-## E-mail:
-✋ Please feel free to e-mail me at: ${answers.email} if you have any questions!
-
+E-mail: ${answers.email}
 `;
 }
 
